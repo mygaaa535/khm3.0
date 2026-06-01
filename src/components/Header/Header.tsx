@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 w-full z-50 h-[80px] bg-[#2596be] border-b border-white"
+      className="fixed top-0 w-full z-30 h-[80px] bg-[#2596be] border-b border-white"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 xl:px-10 h-full flex justify-between items-center">
         {/* Logo */}
@@ -70,9 +70,7 @@ export default function Header() {
                 key={link.path}
                 href={link.path}
                 className={`px-3 flex items-center h-full text-[14px] tracking-wide transition-all duration-500 relative group whitespace-nowrap ${
-                  isActive
-                    ? "text-gray-900"
-                    : "text-white hover:text-white/80"
+                  isActive ? "text-gray-900" : "text-white hover:text-white/80"
                 }`}
               >
                 {link.name}
@@ -90,10 +88,10 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Language Switcher - Desktop */}
+          {/* Language Switcher - Always Visible */}
           <button
             onClick={toggleLanguage}
-            className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/30 hover:bg-white/10 text-white text-xs transition-all duration-300 group"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/30 hover:bg-white/10 text-white text-xs transition-all duration-300 group"
           >
             <div className="relative w-4 h-3 overflow-hidden rounded-sm shadow-sm">
               <Image
@@ -111,7 +109,7 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`xl:hidden relative z-50 p-2 rounded-lg transition-all duration-300 ${
+            className={`xl:hidden relative z-51 p-2 rounded-lg transition-all duration-300 ${
               isMobileMenuOpen
                 ? "text-neutral-800 dark:text-neutral-200"
                 : "text-white hover:bg-white/10"
@@ -147,7 +145,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 xl:hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`fixed inset-0 z-50 xl:hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isMobileMenuOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"
@@ -163,7 +161,7 @@ export default function Header() {
 
         {/* Menu Panel - minimal sidebar */}
         <div
-          className={`absolute top-0 right-0 w-[260px] sm:w-[280px] bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl shadow-2xl rounded-bl-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`absolute z-50 top-0 right-0 w-[260px] sm:w-[280px] bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl shadow-2xl rounded-bl-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -203,38 +201,6 @@ export default function Header() {
                 );
               })}
             </nav>
-
-            {/* Language Switcher */}
-            <div
-              className="mt-2"
-              style={{
-                transitionProperty: "opacity, transform",
-                transitionDuration: "0.3s",
-                transitionTimingFunction: "ease",
-                transitionDelay: isMobileMenuOpen ? "320ms" : "0ms",
-                opacity: isMobileMenuOpen ? 1 : 0,
-                transform: isMobileMenuOpen
-                  ? "translateY(0)"
-                  : "translateY(6px)",
-              }}
-            >
-              <button
-                onClick={() => {
-                  toggleLanguage();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-300 text-[14px] font-medium hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
-              >
-                <Image
-                  src={language === "en" ? "/images/icons/mn.png" : "/en.png"}
-                  alt="Switch Language"
-                  width={16}
-                  height={11}
-                  className="rounded-sm"
-                />
-                {language === "en" ? "Монгол хэл" : "English"}
-              </button>
-            </div>
           </div>
         </div>
       </div>
