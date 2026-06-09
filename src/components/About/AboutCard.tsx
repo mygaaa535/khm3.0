@@ -20,7 +20,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({
 }) => {
   return (
     <div
-      className={`${bgColor} p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-transparent hover:border-[#0082b4]/10 group ${className}`}
+      className={`${bgColor} min-w-[275px] p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-transparent hover:border-[#0082b4]/10 group ${className}`}
     >
       <div className="bg-white w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
         <Icon className="w-8 h-8 text-gray-800" strokeWidth={1.5} />

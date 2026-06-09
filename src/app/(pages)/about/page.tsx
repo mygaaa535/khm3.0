@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Leaf, Heart, TrendingUp } from "lucide-react";
 import { AboutCard } from "@/components/About/AboutCard";
 import { EthicsSection } from "@/components/About/EthicsSection";
@@ -75,7 +75,7 @@ export default function AboutPage() {
               description={
                 isEn
                   ? "Regardless of the scope or importance of the work being performed, our company focuses on every detail and prioritizes a sincere approach. This principle is fundamental to every unit of the company."
-                  : "Манай компа хийж гүйцэтгэж байгаа ажлын хэмжээ, чухлын зэргээс үл хамааран ажил бүрийн деталь-д анхаарч аливаад чин сэтгэлээр хандах хандлагыг эрхэмлэдэг бөгөөд энэхүү зарчим нь компанийн эд эс, нэгж бүрд тавигддаг үндсэн зарчим юм."
+                  : "Манай компани хийж гүйцэтгэж байгаа ажлын хэмжээ, чухлын зэргээс үл хамааран ажил бүрийн деталь-д анхаарч аливаад чин сэтгэлээр хандах хандлагыг эрхэмлэдэг бөгөөд энэхүү зарчим нь компанийн эд эс, нэгж бүрд тавигддаг үндсэн зарчим юм."
               }
             />
             <AboutCard

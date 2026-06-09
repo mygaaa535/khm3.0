@@ -35,7 +35,7 @@ export default function Home() {
           }`}
         >
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tight leading-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+          <h1 className="text-5xl md:text-5xl lg:text-5xl font-black text-white mb-8  drop-shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             {language === "mn" ? (
               <>
                 Сайныг хамтдаа <br className="hidden md:block" />
@@ -46,7 +46,10 @@ export default function Home() {
             ) : (
               <>
                 Excellence <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">
+                <span
+                  className="
+                 bg-clip-text"
+                >
                   together
                 </span>
               </>
