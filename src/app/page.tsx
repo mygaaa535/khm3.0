@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const { t, language } = useLanguage();
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -46,12 +47,7 @@ export default function Home() {
             ) : (
               <>
                 Excellence <br className="hidden md:block" />
-                <span
-                  className="
-                 bg-clip-text"
-                >
-                  together
-                </span>
+                <span className="bg-clip-text">together</span>
               </>
             )}
           </h1>

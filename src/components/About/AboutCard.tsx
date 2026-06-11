@@ -27,7 +27,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({
       </div>
       <h3 className="text-xl font-bold mb-4 text-gray-900">{title}</h3>
       {description && (
-        <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">
+        <p className="text-gray-600 text-base leading-relaxed whitespace-pre-line">
           {description}
         </p>
       )}

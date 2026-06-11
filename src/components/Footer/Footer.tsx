@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Slogan (Uria ug) */}
           <div className="max-w-4xl">
-            <p className="text-[15px] leading-relaxed text-white">
+            <p className="text-base leading-relaxed text-white">
               {t("footertext")}
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href="tel:78001100"
-                  className="text-[15px] hover:underline decoration-2 underline-offset-4 transition-all tracking-wider"
+                  className="text-base hover:underline decoration-2 underline-offset-4 transition-all tracking-wider"
                 >
                   78001100
                 </a>
@@ -73,7 +73,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href="mailto:info@khm.mn"
-                  className="text-[15px] hover:underline decoration-2 underline-offset-4 transition-all tracking-wider"
+                  className="text-base hover:underline decoration-2 underline-offset-4 transition-all tracking-wider"
                 >
                   info@khm.mn
                 </a>
@@ -101,14 +101,14 @@ export default function Footer() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <p className="text-[15px] leading-snug ">{t("AddressDetail")}</p>
+              <p className="text-base leading-snug ">{t("AddressDetail")}</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-4 border-t border-white/10 flex flex-col items-center">
-          <p className="text-[14px] text-white/60 text-center">
+          <p className="text-sm text-white/60 text-center">
             {t("Copyright by Khankhugshin International LLC")}
           </p>
         </div>

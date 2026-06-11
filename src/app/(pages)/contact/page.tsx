@@ -128,10 +128,10 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
                 {/* Address */}
                 <div>
-                  <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">
+                  <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1.5">
                     {t("Address")}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                  <p className="text-gray-600 text-base leading-relaxed max-w-xs">
                     {t("AddressDetail")}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                 {/* Phone & Email */}
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1.5">
                       {t("Tel")}
                     </h3>
                     <a
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1.5">
                       {t("Email")}
                     </h3>
                     <a
@@ -183,7 +183,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-light text-gray-900 mb-2">
                   {t("Thank you for your message!")}
                 </h3>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-500 text-base">
                   {t("We will contact you shortly.")}
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                   <div className="space-y-1.5 border-b border-gray-100 pb-1">
                     <label
                       htmlFor="name"
-                      className="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+                      className="text-xs font-bold text-gray-400 uppercase tracking-widest"
                     >
                       {t("Name")}
                     </label>
@@ -204,10 +204,10 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Name"
-                      className="w-full py-1 bg-transparent text-sm text-gray-900 outline-none placeholder:text-gray-300"
+                      className="w-full py-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-300"
                     />
                     {errors.name && (
-                      <span className="text-[9px] text-red-500 uppercase tracking-tighter">
+                      <span className="text-xs text-red-500 uppercase tracking-tighter">
                         {errors.name}
                       </span>
                     )}
@@ -216,7 +216,7 @@ export default function ContactPage() {
                   <div className="space-y-1.5 border-b border-gray-100 pb-1">
                     <label
                       htmlFor="phone"
-                      className="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+                      className="text-xs font-bold text-gray-400 uppercase tracking-widest"
                     >
                       {t("Tel")}
                     </label>
@@ -227,10 +227,10 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Phone"
-                      className="w-full py-1 bg-transparent text-sm text-gray-900 outline-none placeholder:text-gray-300"
+                      className="w-full py-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-300"
                     />
                     {errors.phone && (
-                      <span className="text-[9px] text-red-500 uppercase tracking-tighter">
+                      <span className="text-xs text-red-500 uppercase tracking-tighter">
                         {errors.phone}
                       </span>
                     )}
@@ -240,7 +240,7 @@ export default function ContactPage() {
                 <div className="space-y-1.5 border-b border-gray-100 pb-1">
                   <label
                     htmlFor="email"
-                    className="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+                    className="text-xs font-bold text-gray-400 uppercase tracking-widest"
                   >
                     {t("Email")}
                   </label>
@@ -251,10 +251,10 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Email"
-                    className="w-full py-1 bg-transparent text-sm text-gray-900 outline-none placeholder:text-gray-300"
+                    className="w-full py-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-300"
                   />
                   {errors.email && (
-                    <span className="text-[9px] text-red-500 uppercase tracking-tighter">
+                    <span className="text-xs text-red-500 uppercase tracking-tighter">
                       {errors.email}
                     </span>
                   )}
@@ -263,7 +263,7 @@ export default function ContactPage() {
                 <div className="space-y-1.5 border-b border-gray-100 pb-1">
                   <label
                     htmlFor="message"
-                    className="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+                    className="text-xs font-bold text-gray-400 uppercase tracking-widest"
                   >
                     {t("Message")}
                   </label>
@@ -274,10 +274,10 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Your message"
-                    className="w-full py-1 bg-transparent text-sm text-gray-900 outline-none resize-none placeholder:text-gray-300"
+                    className="w-full py-1 bg-transparent text-base text-gray-900 outline-none resize-none placeholder:text-gray-300"
                   />
                   {errors.message && (
-                    <span className="text-[9px] text-red-500 uppercase tracking-tighter">
+                    <span className="text-xs text-red-500 uppercase tracking-tighter">
                       {errors.message}
                     </span>
                   )}
@@ -286,7 +286,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={formState === "loading"}
-                  className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-gray-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {formState === "loading" ? "Sending..." : t("Submit")}
                 </button>

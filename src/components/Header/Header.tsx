@@ -69,7 +69,7 @@ export default function Header() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`px-3 flex items-center h-full text-[14px] tracking-wide transition-all duration-500 relative group whitespace-nowrap ${
+                className={`px-3 flex items-center h-full text-base tracking-wide transition-all duration-500 relative group whitespace-nowrap ${
                   isActive ? "text-gray-900" : "text-white hover:text-white/80"
                 }`}
               >
@@ -91,7 +91,7 @@ export default function Header() {
           {/* Language Switcher - Always Visible */}
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/30 hover:bg-white/10 text-white text-xs transition-all duration-300 group"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/30 hover:bg-white/10 text-white text-sm transition-all duration-300 group"
           >
             <div className="relative w-4 h-3 overflow-hidden rounded-sm shadow-sm">
               <Image
@@ -175,7 +175,7 @@ export default function Header() {
                     key={link.path}
                     href={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center gap-2 px-3 py-[10px] text-[14px] font-medium border-b border-neutral-100 dark:border-neutral-800/60 transition-colors duration-200 ${
+                    className={`flex items-center gap-2 px-3 py-[10px] text-base font-medium border-b border-neutral-100 dark:border-neutral-800/60 transition-colors duration-200 ${
                       isActive
                         ? "text-blue-600 dark:text-blue-400"
                         : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"

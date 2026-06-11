@@ -56,7 +56,7 @@ const mnEthicsData = [
     icon: Briefcase,
     title: "Ашиг сонирхлын зөрчил",
     children: (
-      <div className="text-gray-600 text-sm leading-relaxed space-y-2">
+      <div className="text-gray-600 text-base leading-relaxed space-y-2">
         <p>
           Аливаа хүний хувийн ашиг сонирхол түүний бодитой шийдвер гаргах
           чадварт нь нөлөөлснөөр ашиг сонирхлын зөрчил үүсдэг. Тухайлбал:
@@ -82,7 +82,7 @@ const mnEthicsData = [
     icon: Landmark,
     title: "Улс төрийн үйл ажиллагаа, хандив",
     children: (
-      <div className="text-gray-600 text-sm leading-relaxed space-y-2">
+      <div className="text-gray-600 text-base leading-relaxed space-y-2">
         <p>
           Хувь хүнийхээ хувьд хэн ч улс төрийн үйл ажиллагаанд оролцож, хандив
           өгөх эрхтэй. Харин ингэхдээ эл үйлдлээ компанийн бус хувийн улс төрийн

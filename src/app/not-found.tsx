@@ -21,7 +21,7 @@ export default function NotFound() {
         </div>
 
         {/* Error Code & Message */}
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-150 text-red-800 dark:bg-red-950/50 dark:text-red-300 mb-4 border border-red-200 dark:border-red-900/50">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-red-150 text-red-800 dark:bg-red-950/50 dark:text-red-300 mb-4 border border-red-200 dark:border-red-900/50">
           Алдаа 404
         </span>
         <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-4xl mb-3">
