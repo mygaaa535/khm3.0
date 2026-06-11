@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function HRPage() {
   return (
     <div className="min-h-screen pt-24 px-10 xl:px-20 ">

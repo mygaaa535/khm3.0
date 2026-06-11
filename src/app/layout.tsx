@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
 import { LanguageProvider } from "@/context/LanguageContext";
+import ApolloWrapper from "@/components/ApolloWrapper";
 import Footer from "../components/Footer/Footer";
 
 const geistSans = Geist({
@@ -35,9 +36,11 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-neutral-50 dark:bg-neutral-950">
         <LanguageProvider>
-          <Header />
-          <main className="grow pt-[80px]">{children}</main>
-          <Footer />
+          <ApolloWrapper>
+            <Header />
+            <main className="grow pt-[80px]">{children}</main>
+            <Footer />
+          </ApolloWrapper>
         </LanguageProvider>
       </body>
     </html>

@@ -1,13 +1,13 @@
-import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
+import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
+import { SetContextLink } from "@apollo/client/link/context";
 
-const httpLink = createHttpLink({
+const httpLink = new HttpLink({
   uri: `${process.env.NEXT_PUBLIC_ERXES_API_URL}/gateway/graphql`,
 });
 
-const authLink = setContext((_, { headers }) => ({
+const authLink = new SetContextLink((prevContext) => ({
   headers: {
-    ...headers,
+    ...prevContext.headers,
     "x-app-token": process.env.NEXT_PUBLIC_ERXES_APP_TOKEN,
   },
 }));
