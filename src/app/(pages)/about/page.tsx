@@ -5,6 +5,7 @@ import { Leaf, Heart, TrendingUp } from "lucide-react";
 import { AboutCard } from "@/components/About/AboutCard";
 import { EthicsSection } from "@/components/About/EthicsSection";
 import { useLanguage } from "@/context/LanguageContext";
+import { TeamSection } from "@/components/About/TeamSection";
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<"values" | "ethics">("values");
@@ -105,6 +106,8 @@ export default function AboutPage() {
           </div>
         )}
       </div>
+
+      <TeamSection />
     </div>
   );
 }
